@@ -230,3 +230,77 @@ class Llama {
   }
 }
 ```
+
+## Collections
+
+## List in Dart
+
+In Dart, a `List` is a collection of elements that are ordered and indexed. Here's an overview of the `List` class and some commonly used methods, properties
+
+### Properties of List
+
+1. first
+2. hashCode
+3. isEmpty
+4. isNotEmpty
+5. iterator
+6. last
+7. length
+8. reversed
+9. runtimeType
+10. single
+
+### List Contructor Method
+
+1. empty
+2. filled
+3. from
+4. generate
+5. of
+6. unmodifiable
+
+### Commonly Used List Methods:
+
+1. `add(E element)`: Adds an element to the end of the list.
+2. `addAll(Iterable<E> iterable)`: Adds all elements of the iterable to the end of the list.
+3. `remove(Object? element)`: Removes the first occurrence of the specified element from the list.
+4. `removeAt(int index)`: Removes the element at the specified index from the list.
+5. `removeLast()`: Removes and returns the last element of the list.
+6. `clear()`: Removes all elements from the list.
+7. `contains(Object? element)`: Returns `true` if the list contains the specified element.
+8. `isEmpty`: Returns `true` if the list is empty.
+9. `isNotEmpty`: Returns `true` if the list is not empty.
+10. `length`: Returns the number of elements in the list.
+11. `elementAt(int index)`: Returns the element at the specified index.
+12. `forEach(void Function(E element) f)`: Applies the given function `f` to each element of the list.
+13. `map<E>(E Function(E) f)`: Returns a new list containing the results of applying the function `f` to each element of the original list.
+14. `where(bool Function(E) test)`: Returns a new list containing all elements that satisfy the predicate `test`.
+15. `sort([int Function(E a, E b)? compare])`: Sorts the list according to the order specified by the `compare` function.
+
+### Example Usage:
+
+```dart
+void main() {
+  // Creating a list
+  List<int> numbers = [1, 2, 3, 4, 5];
+
+  // Adding elements
+  numbers.add(6);
+
+  // Removing elements
+  numbers.remove(3);
+
+  // Printing the list
+  print(numbers); // Output: [1, 2, 4, 5, 6]
+
+  // Check if list contains an element
+  print(numbers.contains(2)); // Output: true
+
+  // Iterating over the list
+  numbers.forEach((number) {
+    print(number);
+  });
+}
+```
+
+This is just a brief overview of the `List` class and some commonly used methods. There are many more methods available in the Dart `List` class for various operations such as searching, updating, and transforming elements. You can explore the Dart documentation for a complete list of methods and their descriptions.
