@@ -38,16 +38,16 @@ void main(List<String> args) {
 
 // Methods
 
-  List myList = [];
-  print(myList);
+  // List myList = [];
+  // print(myList);
 
-  myList.add(2); // add new value on last
-  // to add multiple values on last we have
-  myList.addAll([5, 6, 7, 8]);
+  // myList.add(2); // add new value on last
+  // // to add multiple values on last we have
+  // myList.addAll([5, 6, 7, 8]);
 
   // remove elements from last
-  myList.removeLast();
-  myList.remove(2); // remove the specific value
+  // myList.removeLast();
+  // myList.remove(2); // remove the specific value
 
   // to check it remove multiple values or not
   // print("before $myList");
@@ -58,10 +58,50 @@ void main(List<String> args) {
 
   // myList.removeAt(1); // to remove from the given index
   // myList.removeRange(0, 1);
-  myList.addAll([2, 3, 5, 6, 8, 9, 0, -12, 34]);
-  print(myList);
-  myList.removeWhere((element) =>
-      element > 5); // remove all the elements which is greater than 5
+  // myList.addAll([2, 3, 5, 6, 8, 9, 0, -12, 34]);
+  // print(myList);
+  // myList.removeWhere((element) =>
+  //     element > 5); // remove all the elements which is greater than 5
+  // myList.clear(); // remove all the elements from the list
 
-  print(myList);
+  // print(myList);
+
+  // =================================================================
+
+  // For Each Function
+  // forEach() == for in loop
+  // List mlist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // for (var e in mlist) {
+  //   print(e);
+  // }
+
+  // where for condition only return those which satisfy the value
+  // return all even numbers in the list
+  // List mlist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // var geteven = mlist.where((e) => (e % 2) == 0); // -> where iterable
+  // print(geteven);
+  // print(geteven.toList());
+
+//  --------------------------------------------------------------------
+
+  /// map -> return Iterable
+  // List mlist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // List mulList = mlist.map((e) => e * 2).toList();
+  // print(mlist);
+  // print(mulList);
+
+  /// reduce
+  /// Reduces a collection to a single value by iteratively combining elements of the collection using the provided function.
+  // List mlist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // var val = mlist.reduce((value, element) => value + element);
+  // print(val);
+
+  // Example
+  // we have a list of student marks and we have to get total marks
+  List stdMarks = [87, 67, 54, 76, 54];
+  int total = stdMarks.reduce((value, element) => value + element);
+  print("Total Marks $total");
+
+// filter fn is not exxist
+//  we used where function that we discuss early
 }
